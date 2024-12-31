@@ -1,0 +1,174 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/devcratz/devhub/refs/heads/main/interface'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "devhub",
+   LoadingTitle = "devhub for mic up",
+   LoadingSubtitle = "by popydevv",
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Example Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key | Youtube Hub",
+      Subtitle = "Key System",
+      Note = "Key In Discord Server",
+      FileName = "YoutubeHubKey1", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"https://pastebin.com/raw/AtgzSPWK"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local MainTab = Window:CreateTab("home", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("main")
+
+local DPTab = Window:CreateTab("unbanvc script", nil) -- Title, Image
+local DPSection = DPTab:CreateSection("unban script")
+
+local OTTab = Window:CreateTab("outfit", nil) -- Title, Image
+local OTSection = OTTab:CreateSection("auto outfit")
+
+local MCTab = Window:CreateTab("misc", nil) -- Title, Image
+local MCSection = MCTab:CreateSection("information/contacts")
+
+local Button = DPTab:CreateButton({
+   Name = "unban script",
+   Callback = function()
+game:GetService("VoiceChatService"):joinVoice()
+   end,
+})
+
+Rayfield:Notify({
+   Title = "You executed the script",
+   Content = "thank you daddy!",
+   Duration = 5,
+   Image = 13047715178,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local Button = MainTab:CreateButton({
+   Name = "infinate yield",
+   Callback = function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()   end,
+})
+
+local Section = MainTab:CreateSection("emotes (free!)")
+
+local Button = MainTab:CreateButton({
+   Name = "emotes",
+   Callback = function()
+loadstring(game:HttpGet('https://pastebin.com/raw/qHFSvCKe'))()
+   end,
+})
+
+local Section = MainTab:CreateSection("tutuhub (paid!)")
+
+local Button = MainTab:CreateButton({
+   Name = "tuhub",
+   Callback = function()
+script_key="CsTwmXsszpwjHWHvgzeFzMltTrOgLeYH";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7e559890f0be877038959448042824d4.lua"))()
+   end,
+})
+
+local Section = MainTab:CreateSection("glitch gui")
+
+local Button = MainTab:CreateButton({
+   Name = "glitch gui",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_11l7Y131YqJjZ31QmV5L8pI23V02b3191sEg26E75472Wl78Vi8870jRv5txZyL1.lua.txt"))()
+   end,
+})
+
+local Section = MainTab:CreateSection("flash-back rewind")
+
+local Button = MainTab:CreateButton({
+   Name = "flashback/rewind",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/unreliqious/Roblox/refs/heads/main/Flashback-Rewind"))()
+   end,
+})
+
+local Section = MainTab:CreateSection("facefuck")
+
+local Button = MainTab:CreateButton({
+   Name = "facefuck",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/unreliqious/Roblox/refs/heads/main/Facefuck"))()
+   end,
+})
+
+local Button = OTTab:CreateButton({
+   Name = "auto outfit gui",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/devcratz/outfit/refs/heads/main/autooutfit"))()
+   end,
+})
+
+local Button = MCTab:CreateButton({
+   Name = "flashback/rewind keybind: c",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MCTab:CreateButton({
+   Name = "facefuck keybind: z",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MCTab:CreateButton({
+   Name = "copy discord server to clipboard",
+   Callback = function()
+-- Roblox Script: Copies text to the clipboard
+local textToCopy = "https://discord.gg/hGbGBsWP"
+
+-- Check if the setclipboard function is available
+if setclipboard then
+    setclipboard(textToCopy)
+    print("Text copied to clipboard!")
+else
+    print("Clipboard access not supported!")
+end
+   end,
+})
+
+local Section = MainTab:CreateSection("systembroken")
+
+local Button = MainTab:CreateButton({
+   Name = "systembroken",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+   end,
+})
+
+local Button = MCTab:CreateButton({
+   Name = "systembroken keybind: b",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = MCTab:CreateButton({
+   Name = "freeemotes keybind: ,",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
